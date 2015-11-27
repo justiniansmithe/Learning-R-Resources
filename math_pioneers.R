@@ -21,3 +21,14 @@ years <- lapply(split_low, select_second)
 #Even sexier
 names <- lapply(split_low, function(x) {x[1]})
 years <- lapply(split_low, function(x) {x[2]})
+
+#Even more sexier and generic
+select_el <- function(vector, index) {
+    element <- lapply(vector, function(x) {x[index]})
+    return(element)
+}
+# Call the select_el() function twice on split_low: names and years
+names <- select_el(split_low, 1)
+years <- select_el(split_low, 2)
+
+
