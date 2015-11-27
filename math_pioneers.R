@@ -22,13 +22,27 @@ years <- lapply(split_low, select_second)
 names <- lapply(split_low, function(x) {x[1]})
 years <- lapply(split_low, function(x) {x[2]})
 
-#Even more sexier and generic
-select_el <- function(vector, index) {
+#Puts the selecting elements into a list
+select_element_list <- function(vector, index) {
     element <- lapply(vector, function(x) {x[index]})
     return(element)
 }
+
+#Select super function
+select_el <- function(x, index){
+    x[index]
+}
 # Call the select_el() function twice on split_low: names and years
-names <- select_el(split_low, 1)
-years <- select_el(split_low, 2)
+names <- lapply(split_low, select_el, index = 1)
+years <- lapply(split_low, select_el, index = 2)
+
+lapply(split_low, function(x) {  
+    if ((x[2]) <= 1705) {
+        print(paste(x[1], "rocks it old schhol from", x[2], "what an OG!"))
+        return(x)
+    } else {
+        print(paste("I'm not that into new-school math rock but this brotha", x[1], "is pretty alright."))
+    }
+ })
 
 
