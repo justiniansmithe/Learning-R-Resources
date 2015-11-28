@@ -8,6 +8,11 @@ extremes <- function(x) {
     min_max <- c(min(x), max(x))
     return(min_max)
 }
+# Create a function that returns all values below zero: below_zero
+below_zero <- function(x) {
+    below_zero_vector <- x[x<0]
+    return(below_zero_vector)
+}
 # Apply extremes_avg() over temp using sapply()
 sapply(temp, extremes_avg)
 
