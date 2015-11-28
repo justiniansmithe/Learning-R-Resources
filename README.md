@@ -5,3 +5,6 @@ Sums up popular days and provides feedback
 
 # math_pioneers
 uses functions and lapply
+
+# extremes_avg
+calculate average of min and max
