@@ -7,4 +7,4 @@ Sums up popular days and provides feedback
 uses functions and lapply
 
 # extremes_avg
-calculate average of min and max
+hardcore functions that only know how to keep it hardcore 
