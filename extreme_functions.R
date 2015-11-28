@@ -13,6 +13,10 @@ below_zero <- function(x) {
     below_zero_vector <- x[x<0]
     return(below_zero_vector)
 }
+# Write a function that 'cat()s' out the average temperatures: print_info
+print_info <- function(x) {
+    return(cat("The average temperature is", mean(x), "\n"))
+}
 # Apply extremes_avg() over temp using sapply()
 sapply(temp, extremes_avg)
 
